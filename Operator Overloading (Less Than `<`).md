@@ -18,14 +18,27 @@ To write a Python program that demonstrates **operator overloading** by overload
 
 3. **Create Objects**:
    - Instantiate two objects `ob1` and `ob2` with values.
-
 4. **Use `<` Operator**:
    - Use `print(ob1 < ob2)` to trigger the overloaded behavior.
 
 ---
 
 ## 💻 Program
-
+```
+class A:
+    def __init__(self, a):
+        self.a = a
+    def __lt__(self, other):
+        if(self.a<other.a):
+            return "ob1 is less than ob2"
+        else:
+            return "ob2 is less than ob1"
+ob1 = A(20)
+ob2 = A(3)
+print(ob1 < ob2)
+```
 ## Output
+<img width="953" height="170" alt="image" src="https://github.com/user-attachments/assets/68e16b46-be19-48a8-853a-b94facd3b3ac" />
 
 ## Result
+Thus, the program has been executed successfully.
